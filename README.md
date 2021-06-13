@@ -34,7 +34,7 @@ const embedB = new DiscordEmbed()
 	.setDescription('Hello, world!')
 	.addField('Inline Field', 'Foo', true)
 	.addField('Generic Field', 'Bar')
-	.setColor(Color3.fromRGB(46, 204, 113));
+	.setColor(Color3.fromRGB(46, 204, 113))
 	.setAuthor({
 		name: 'builderman'
 	});
