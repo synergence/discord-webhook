@@ -1,0 +1,32 @@
+{
+	"name": "@rbxts/discord-webhook",
+	"version": "1.0.0",
+	"description": "An easy way to send rich Discord webhooks",
+	"main": "out/init.lua",
+	"scripts": {
+		"prepublishOnly": "rbxtsc"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/synergence/discord-webhook.git"
+	},
+	"keywords": [],
+	"author": "xethlyx",
+	"license": "Unlicense",
+	"types": "out/index.d.ts",
+	"files": [
+		"out",
+		"LICENSE"
+	],
+	"bugs": {
+		"url": "https://github.com/synergence/discord-webhook/issues"
+	},
+	"homepage": "https://github.com/synergence/discord-webhook#readme",
+	"publishConfig": {
+		"access": "public"
+	},
+	"devDependencies": {
+		"@rbxts/compiler-types": "^1.1.1-types.3",
+		"@rbxts/types": "^1.0.493"
+	}
+}

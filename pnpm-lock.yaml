@@ -1,0 +1,19 @@
+lockfileVersion: 5.3
+
+specifiers:
+  '@rbxts/compiler-types': ^1.1.1-types.3
+  '@rbxts/types': ^1.0.493
+
+devDependencies:
+  '@rbxts/compiler-types': 1.1.1-types.3
+  '@rbxts/types': 1.0.493
+
+packages:
+
+  /@rbxts/compiler-types/1.1.1-types.3:
+    resolution: {integrity: sha512-jTY9zvwALZOgbfQX6nKazV3clsYds2kO5BIb7KQw7nNq3cibhs0aO8Zy0ePr86IVhZfPe3eQLiioROuOY2y/1g==}
+    dev: true
+
+  /@rbxts/types/1.0.493:
+    resolution: {integrity: sha512-r5Gv8y75gx0jmCyFeg/G7JISppGd2Fyh2d1ZOM84kh9sRTkT7mCkUI/egFEcLIsztDdHr97hRA8YC5jDHQQ6dA==}
+    dev: true
