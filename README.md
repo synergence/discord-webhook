@@ -9,7 +9,7 @@ const webhook = new DiscordWebhook('YOUR_WEBHOOK_URL_HERE');
 
 const embed = new DiscordEmbed()
 	.setTitle('Example Embed')
-	.setDescription(`Hello, world!`)
+	.setDescription('Hello, world!')
 	.addField('Inline Field', 'Foo', true)
 	.addField('Generic Field', 'Bar')
 	.setColor(Color3.fromRGB(46, 204, 113));
