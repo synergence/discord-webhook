@@ -29,6 +29,20 @@ export class DiscordMessage {
 	}
 
 	/**
+	 * Gets the embeds in this message
+	 */
+	public getEmbeds() {
+		return this.embeds;
+	}
+
+	/**
+	 * If embeds can be added to this message. Discord limits embeds to 10 per message.
+	 */
+	public canAddEmbed() {
+		return this.embeds.size() < 10;
+	}
+
+	/**
 	 * Sets the content of the message
 	 * @param content The content
 	 */
@@ -37,11 +51,12 @@ export class DiscordMessage {
 	}
 
 	/**
-	 * Adds an embed to the message. Discord limits embeds to a maximum of 10.
+	 * A helper method to add an embed to the message. Discord limits embeds to a maximum of 10. You can use `canAddEmbed()` to check for this limit.
+	 * If you need to bypass this limit for whatever reason (even though the request will fail) or need more capabilities, `getEmbeds()` is available.
 	 * @param embed The embed to add
 	 */
 	public addEmbed(embed: DiscordEmbed) {
-		if (this.embeds.size() > 10) throw 'Cannot add more embeds! Limited to 10';
+		if (!this.canAddEmbed()) throw 'Cannot add more embeds! Limited to 10';
 		this.embeds.push(embed);
 		return this;
 	}

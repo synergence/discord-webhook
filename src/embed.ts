@@ -154,6 +154,10 @@ export class DiscordEmbed {
 		return this;
 	}
 
+	public getFields() {
+		return this.fields;
+	}
+
 	public addField(name: string, value: string, inline?: boolean) {
 		if (!this.fields) this.fields = [];
 		this.fields.push({
