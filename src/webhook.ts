@@ -63,7 +63,7 @@ export class DiscordWebhook {
 		});
 
 		return {
-			success: pcallResult.success && pcallResult.value.StatusCode === 200,
+			success: pcallResult.success && pcallResult.value.StatusCode >= 200 && pcallResult.value.StatusCode < 300,
 			result: pcallResult.success ? pcallResult.value : undefined,
 			error: pcallResult.success ? undefined : pcallResult.error
 		};
