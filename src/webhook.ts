@@ -51,10 +51,14 @@ export class DiscordWebhook {
 		const generated = message.toObject(username, avatarUrl, tts, allowedMentions);
 
 		const pcallResult = opcall(() => {
+			const headers: HttpHeaders = new Map();
+			headers.set('Content-Type', 'application/json');
+
 			return HttpService.RequestAsync({
 				Url: this.url,
 				Body: HttpService.JSONEncode(generated),
-				Method: 'POST'
+				Method: 'POST',
+				Headers: headers
 			});
 		});
 
